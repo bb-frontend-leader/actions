@@ -12,6 +12,16 @@ jobs:
     steps:
         - name: Hello world
           run: echo "Hello world"
+
+        - name: Touch file
+          run: touch hello.txt
+
+        - name: Set text
+          run: echo "Hello world" >> hello.txt
+
+        - name: Read file
+          run: cat hello.txt
+
   second-job: 
     runs-on: ubuntu-18.04
 
