@@ -1,0 +1,14 @@
+# First step define a name
+name: Hello world!
+
+# Next step is define an event that execute this workflow
+on: [push]
+
+# Now you need a job to define the step by step that you need on this workflow
+jobs:
+  first-job: 
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Hello world
+          run: echo "Hello world"
