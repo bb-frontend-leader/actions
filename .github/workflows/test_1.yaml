@@ -12,3 +12,9 @@ jobs:
     steps:
         - name: Hello world
           run: echo "Hello world"
+  second-job: 
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: LS
+        run: ls -al
