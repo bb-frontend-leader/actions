@@ -1,0 +1,13 @@
+name: Test
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'latest'
+        run: |
+            echo "HELLO WORLD" >> hello.txt
+            cat hello.txt
