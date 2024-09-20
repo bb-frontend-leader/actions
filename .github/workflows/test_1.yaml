@@ -2,7 +2,13 @@
 name: Hello world!
 
 # Next step is define an event that execute this workflow
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - main
+  pull_request: 
+    branches: 
+      - main
 
 # Now you need a job to define the step by step that you need on this workflow
 jobs:
