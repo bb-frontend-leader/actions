@@ -2,7 +2,13 @@
 name: Hello world!
 
 # Next step is define an event that execute this workflow
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request: 
+    branches: 
+      - main
 
 # Now you need a job to define the step by step that you need on this workflow
 jobs:
@@ -25,6 +31,8 @@ jobs:
   second-job: 
     runs-on: ubuntu-latest
     needs: [first-job]
-    steps:
+    steps:          
+      - name: Checkout     
+        uses: actions/checkout@v4.1.7
       - name: LS
         run: ls -al
