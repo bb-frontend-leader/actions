@@ -1,0 +1,14 @@
+name: Enviroment variables
+
+on: [push]
+
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+
+    env: 
+        MY_VAR: My enviroment variable
+
+    steps:
+      - name: Test
+        run: "echo Valor: $MY_VAR"
