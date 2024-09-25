@@ -11,4 +11,6 @@ jobs:
 
     steps:
       - name: Test
-        run: "echo Valor: $MY_VAR"
+        env:
+            STEP_MY_VAR: Step Scope
+        run: "echo Valor: $STEP_MY_VAR"
